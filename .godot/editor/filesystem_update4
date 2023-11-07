@@ -1,10 +1,7 @@
-res://Enemy.tscn
-res://Platformer_Tileset.tres
 res://Level1.tscn
-res://Enemy.gd
-res://Spikes.tscn
-res://Spikes.gd
-res://Player.gd
-res://Coin.tscn
 res://Coin.gd
+res://Platformer_Tileset.tres
+res://Level2.tscn
 res://Player.tscn
+res://EndFlag.tscn
+res://EndFlag.gd
