@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn30rvs1dqoyd"]
+[gd_scene load_steps=9 format=3 uid="uid://bn30rvs1dqoyd"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_lmi24"]
 [ext_resource type="Texture2D" uid="uid://cdqw5kifbyiuj" path="res://Sprites/Characters/character_0006.png" id="2_vo4c4"]
@@ -29,6 +29,11 @@ font_size = 48
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="GDScript" id="GDScript_fyep1"]
+script/source = "extends Label
+
+"
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, -12)
 script = ExtResource("1_lmi24")
@@ -57,3 +62,4 @@ offset_right = 190.0
 offset_bottom = 70.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_nhdgb")
+script = SubResource("GDScript_fyep1")

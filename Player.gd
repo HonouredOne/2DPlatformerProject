@@ -5,6 +5,7 @@ var jump_force : float = 250.0
 var gravity : float = 500.0
 
 var score : int = 0
+
 @onready var score_text : Label = $CanvasLayer/ScoreText
 @onready var _animated_sprite = $AnimatedSprite2D
 
