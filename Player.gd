@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
 var move_speed : float = 100.0
-var jump_force : float = 200.0
+var jump_force : float = 250.0
 var gravity : float = 500.0
+
+var score : int = 0
+@onready var score_text : Label = $CanvasLayer/ScoreText
+@onready var _animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
 	if  not is_on_floor():
@@ -19,3 +23,25 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 	
 	move_and_slide()
+	
+	if global_position.y > 100:
+		game_over()
+
+func _process(delta):
+	if velocity.x != 0 and is_on_floor():
+		_animated_sprite.play()
+	else:
+		_animated_sprite.stop()
+	
+	if velocity.x > 0:
+		_animated_sprite.flip_h = true
+	if velocity.x < 0:
+		_animated_sprite.flip_h = false
+
+func game_over():
+	get_tree().reload_current_scene()
+
+func add_score(amount):
+	score += amount
+	score_text.text = str("Score: ", score)
+	$CoinGet.play()
