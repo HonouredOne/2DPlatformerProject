@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://blngxn0c5wt00"]
 
-[ext_resource type="TileSet" uid="uid://cj51wfdtrliei" path="res://Platformer_Tileset.tres" id="1_74opr"]
-[ext_resource type="PackedScene" uid="uid://bn30rvs1dqoyd" path="res://Player.tscn" id="2_ytncp"]
-[ext_resource type="PackedScene" uid="uid://c7163b1a8e70f" path="res://EndFlag.tscn" id="3_dt8fe"]
+[ext_resource type="TileSet" uid="uid://cj51wfdtrliei" path="res://Platformer_Tileset.tres" id="1_k76lx"]
+[ext_resource type="PackedScene" uid="uid://bn30rvs1dqoyd" path="res://Scenes/Characters/Player.tscn" id="2_x0ucw"]
+[ext_resource type="PackedScene" uid="uid://c7163b1a8e70f" path="res://Scenes/Objects/EndFlag.tscn" id="3_fgo4b"]
 
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource("1_74opr")
+tile_set = ExtResource("1_k76lx")
 format = 2
 layer_0/tile_data = PackedInt32Array(65529, 131072, 5, 65530, 131072, 5, 65531, 131072, 5, 65532, 131072, 5, 65533, 131072, 5, 65534, 131072, 5, 65535, 131072, 5, 0, 131072, 5, 1, 131072, 5, 2, 131072, 5, 3, 131072, 5, 6, 131072, 5, 7, 131072, 5, 8, 131072, 5, 9, 131072, 5, 10, 131072, 5, 131065, 131072, 6, 131066, 131072, 6, 131067, 131072, 6, 131068, 131072, 6, 131069, 131072, 6, 131070, 131072, 6, 131071, 131072, 6, 65536, 131072, 6, 65537, 131072, 6, 65538, 131072, 6, 65539, 131072, 6, 65540, 131072, 6, 65541, 131072, 6, 65542, 131072, 6, 65543, 131072, 6, 65544, 131072, 6, 65545, 131072, 6, 65546, 131072, 6, 11, 196608, 5, 65547, 196608, 6, 65528, 65536, 5, 131064, 65536, 6, 4, 327680, 1, -65532, 65536, 6, -65531, 196608, 6, 5, 262144, 1, -131068, 65536, 5, -131067, 196608, 5)
 
-[node name="Player" parent="." instance=ExtResource("2_ytncp")]
+[node name="Player" parent="." instance=ExtResource("2_x0ucw")]
 position = Vector2(-131, -12)
 
-[node name="EndFlag" parent="." instance=ExtResource("3_dt8fe")]
+[node name="EndFlag" parent="." instance=ExtResource("3_fgo4b")]
 position = Vector2(205, -7)
 next_scene = "res://Level1.tscn"

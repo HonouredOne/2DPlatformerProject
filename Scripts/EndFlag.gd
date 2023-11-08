@@ -12,5 +12,5 @@ func _on_body_entered(body):
 		body.store_score()
 		get_tree().change_scene_to_file(next_scene)
 
-func _process(delta):
+func _process(_delta):
 	$AnimatedSprite2D.play()

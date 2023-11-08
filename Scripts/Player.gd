@@ -31,7 +31,7 @@ func _physics_process(delta):
 	if global_position.y > 100:
 		game_over()
 
-func _process(delta):
+func _process(_delta):
 	if velocity.x != 0 and is_on_floor():
 		_animated_sprite.play()
 	else:

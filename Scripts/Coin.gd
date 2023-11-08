@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_range(1, 10, 1) var value
+@export_range(1, 10, 1) var value = 1
 
 var bob_height : float = 7.0
 var bob_speed : float = 10.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bn30rvs1dqoyd"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_lmi24"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7ll6t"]
 [ext_resource type="Texture2D" uid="uid://cdqw5kifbyiuj" path="res://Sprites/Characters/character_0006.png" id="2_vo4c4"]
 [ext_resource type="Texture2D" uid="uid://0ew6wvxah47o" path="res://Sprites/Characters/character_0007.png" id="3_p5mri"]
 [ext_resource type="AudioStream" uid="uid://d23hdcbessls5" path="res://Audio/coin_2-89099.mp3" id="4_mhtfu"]
@@ -36,7 +36,7 @@ script/source = "extends Label
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, -12)
-script = ExtResource("1_lmi24")
+script = ExtResource("1_7ll6t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m6ndp")

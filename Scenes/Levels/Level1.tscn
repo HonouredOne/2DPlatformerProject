@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5tv66vnlexms"]
 
 [ext_resource type="TileSet" uid="uid://cj51wfdtrliei" path="res://Platformer_Tileset.tres" id="1_8leg8"]
-[ext_resource type="PackedScene" uid="uid://bn30rvs1dqoyd" path="res://Player.tscn" id="2_kln3f"]
-[ext_resource type="PackedScene" uid="uid://bph4rj2fv6f0h" path="res://Enemy.tscn" id="4_3bjsa"]
-[ext_resource type="PackedScene" uid="uid://tysqopn6n4aw" path="res://Spikes.tscn" id="5_16dot"]
-[ext_resource type="PackedScene" uid="uid://c7163b1a8e70f" path="res://EndFlag.tscn" id="6_cb551"]
-[ext_resource type="PackedScene" uid="uid://dsu2vvf0tref8" path="res://Coin.tscn" id="6_e3l74"]
+[ext_resource type="PackedScene" uid="uid://bn30rvs1dqoyd" path="res://Scenes/Characters/Player.tscn" id="2_st5gt"]
+[ext_resource type="PackedScene" uid="uid://dsu2vvf0tref8" path="res://Scenes/Objects/Coin.tscn" id="3_jym8e"]
+[ext_resource type="PackedScene" uid="uid://bph4rj2fv6f0h" path="res://Scenes/Characters/Enemy.tscn" id="4_3bjsa"]
+[ext_resource type="PackedScene" uid="uid://c7163b1a8e70f" path="res://Scenes/Objects/EndFlag.tscn" id="6_cb551"]
+[ext_resource type="PackedScene" uid="uid://tysqopn6n4aw" path="res://Scenes/Objects/Spikes.tscn" id="6_e3l74"]
 
 [node name="Main" type="Node2D"]
 
@@ -15,10 +15,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
+offset_left = -503.0
+offset_top = -362.0
+offset_right = 777.0
+offset_bottom = 358.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.765637, 0.546196, 0.694974, 1)
@@ -28,54 +28,48 @@ tile_set = ExtResource("1_8leg8")
 format = 2
 layer_0/tile_data = PackedInt32Array(65534, 131072, 1, 131070, 131072, 6, 196606, 131072, 6, 262142, 131072, 6, 65535, 131072, 1, 131071, 131072, 6, 196607, 131072, 6, 262143, 131072, 6, 0, 131072, 1, 65536, 131072, 6, 131072, 131072, 6, 196608, 131072, 6, 1, 131072, 1, 65537, 131072, 6, 131073, 131072, 6, 196609, 131072, 6, 2, 131072, 1, 65538, 131072, 6, 131074, 131072, 6, 196610, 131072, 6, 3, 131072, 1, 65539, 131072, 6, 131075, 131072, 6, 196611, 131072, 6, -131068, 65536, 1, -65532, 65536, 6, 4, 327680, 1, 65540, 131072, 6, 131076, 131072, 6, 196612, 131072, 6, -131067, 196608, 1, -65531, 196608, 6, 5, 196608, 6, 65541, 196608, 6, 131077, 196608, 6, 196613, 196608, 6, 65531, 65536, 1, 131067, 65536, 6, 196603, 65536, 6, 262139, 65536, 6, 65532, 131072, 1, 131068, 131072, 6, 196604, 131072, 6, 262140, 131072, 6, 65533, 131072, 1, 131069, 131072, 6, 196605, 131072, 6, 262141, 131072, 6, -131063, 65536, 1, -131062, 131072, 1, -131061, 196608, 1, -65527, 65536, 6, -65526, 131072, 6, -65525, 196608, 6, 9, 65536, 6, 10, 131072, 6, 11, 196608, 6, -131058, 786432, 6, -131057, 851968, 6, -131056, 851968, 6, -131055, 851968, 6, -131054, 917504, 5, -196590, 851968, 4, -196589, 851968, 6, -196588, 851968, 6, -196587, 917504, 4, -131051, 983040, 5, -65515, 851968, 5, -65514, 851968, 6, -65513, 851968, 6, -65512, 917504, 5, -131048, 983040, 5, -196584, 851968, 4, -196583, 851968, 6, -196582, 851968, 6, -196581, 917504, 4, -131045, 983040, 5, -65509, 983040, 5, 27, 983040, 5, 65563, 983040, 6)
 
-[node name="Player" parent="." instance=ExtResource("2_kln3f")]
+[node name="Player" parent="." instance=ExtResource("2_st5gt")]
+position = Vector2(16, -12)
 
 [node name="Spikes" type="Node" parent="."]
 
-[node name="Spikes" parent="Spikes" instance=ExtResource("5_16dot")]
+[node name="Spikes" parent="Spikes" instance=ExtResource("6_e3l74")]
 position = Vector2(98, -45)
 
-[node name="Spikes2" parent="Spikes" instance=ExtResource("5_16dot")]
+[node name="Spikes2" parent="Spikes" instance=ExtResource("6_e3l74")]
 position = Vector2(-80, -9)
 
-[node name="Spikes3" parent="Spikes" instance=ExtResource("5_16dot")]
+[node name="Spikes3" parent="Spikes" instance=ExtResource("6_e3l74")]
 position = Vector2(189, -45)
 
-[node name="Spikes4" parent="Spikes" instance=ExtResource("5_16dot")]
+[node name="Spikes4" parent="Spikes" instance=ExtResource("6_e3l74")]
 position = Vector2(316, -44)
 
-[node name="Spikes5" parent="Spikes" instance=ExtResource("5_16dot")]
+[node name="Spikes5" parent="Spikes" instance=ExtResource("6_e3l74")]
 position = Vector2(487, -62)
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("6_e3l74")]
-position = Vector2(-26, -15)
-value = 1.0
-
-[node name="Coin2" parent="Coins" instance=ExtResource("6_e3l74")]
+[node name="Coin" parent="Coins" instance=ExtResource("3_jym8e")]
 position = Vector2(-57, -15)
-value = 1.0
 
-[node name="Coin3" parent="Coins" instance=ExtResource("6_e3l74")]
+[node name="Coin2" parent="Coins" instance=ExtResource("3_jym8e")]
+position = Vector2(-26, -15)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("3_jym8e")]
 position = Vector2(80, -51)
-value = 1.0
 
-[node name="Coin4" parent="Coins" instance=ExtResource("6_e3l74")]
+[node name="Coin4" parent="Coins" instance=ExtResource("3_jym8e")]
 position = Vector2(172, -51)
-value = 1.0
 
-[node name="Coin5" parent="Coins" instance=ExtResource("6_e3l74")]
+[node name="Coin5" parent="Coins" instance=ExtResource("3_jym8e")]
 position = Vector2(207, -51)
-value = 1.0
 
-[node name="Coin6" parent="Coins" instance=ExtResource("6_e3l74")]
-position = Vector2(360, -68)
-value = 1.0
-
-[node name="Coin7" parent="Coins" instance=ExtResource("6_e3l74")]
+[node name="Coin6" parent="Coins" instance=ExtResource("3_jym8e")]
 position = Vector2(288, -50)
-value = 1.0
+
+[node name="Coin7" parent="Coins" instance=ExtResource("3_jym8e")]
+position = Vector2(360, -68)
 
 [node name="Enemies" type="Node" parent="."]
 

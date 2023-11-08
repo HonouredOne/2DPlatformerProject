@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7163b1a8e70f"]
 
-[ext_resource type="Script" path="res://EndFlag.gd" id="1_nvrrs"]
+[ext_resource type="Script" path="res://Scripts/EndFlag.gd" id="1_16ytx"]
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="2_srj42"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fef8b"]
@@ -29,7 +29,7 @@ animations = [{
 size = Vector2(18, 18)
 
 [node name="EndFlag" type="Area2D"]
-script = ExtResource("1_nvrrs")
+script = ExtResource("1_16ytx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ymcsa")
