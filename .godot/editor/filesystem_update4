@@ -1,9 +1,9 @@
-res://Level2.tscn
+res://EndFlag.tscn
 res://Coin.gd
 res://Platformer_Tileset.tres
-res://Level1.tscn
-res://Player.tscn
-res://EndFlag.tscn
 res://Player.gd
 res://PlayerVariables.gd
-res://ScoreText.gd
+res://Level1.tscn
+res://Level2.tscn
+res://Player.tscn
+res://EndFlag.gd

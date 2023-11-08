@@ -4,10 +4,13 @@ var move_speed : float = 100.0
 var jump_force : float = 250.0
 var gravity : float = 500.0
 
-var score : int = 0
+var score : int = PlayerVariables.current_score
 
 @onready var score_text : Label = $CanvasLayer/ScoreText
 @onready var _animated_sprite = $AnimatedSprite2D
+
+func _ready():
+	score_text.text = str("Score: ", score) 
 
 func _physics_process(delta):
 	if  not is_on_floor():
@@ -46,3 +49,6 @@ func add_score(amount):
 	score += amount
 	score_text.text = str("Score: ", score)
 	$CoinGet.play()
+
+func store_score():
+	PlayerVariables.current_score = score
