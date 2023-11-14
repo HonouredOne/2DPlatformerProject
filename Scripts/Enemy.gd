@@ -3,7 +3,7 @@ extends Area2D
 @onready var _animated_sprite = $AnimatedSprite2D
 
 @export var move_speed : float = 30.0
-@export var move_dir : Vector2
+@export var move_direction : Vector2
 
 var start_pos : Vector2
 var target_pos : Vector2
@@ -12,7 +12,7 @@ var target_pos : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_pos = global_position
-	target_pos = start_pos + move_dir
+	target_pos = start_pos + move_direction
 	_animated_sprite.play()
 
 
@@ -22,7 +22,7 @@ func _process(delta):
 
 	if global_position == target_pos:
 		if global_position == start_pos:
-			target_pos = start_pos + move_dir
+			target_pos = start_pos + move_direction
 		else:
 			target_pos = start_pos
 

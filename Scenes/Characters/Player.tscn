@@ -1,28 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn30rvs1dqoyd"]
+[gd_scene load_steps=8 format=3 uid="uid://bn30rvs1dqoyd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7ll6t"]
-[ext_resource type="Texture2D" uid="uid://cdqw5kifbyiuj" path="res://Sprites/Characters/character_0006.png" id="2_vo4c4"]
-[ext_resource type="Texture2D" uid="uid://0ew6wvxah47o" path="res://Sprites/Characters/character_0007.png" id="3_p5mri"]
+[ext_resource type="Texture2D" uid="uid://bqb4j84403j2a" path="res://Sprites/Characters/character_0000.png" id="2_1ftpu"]
+[ext_resource type="Texture2D" uid="uid://2k3iywmsqila" path="res://Sprites/Characters/character_0001.png" id="3_uovtg"]
 [ext_resource type="AudioStream" uid="uid://d23hdcbessls5" path="res://Audio/coin_2-89099.mp3" id="4_mhtfu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m6ndp"]
 animations = [{
 "frames": [{
 "duration": 0.5,
-"texture": ExtResource("2_vo4c4")
+"texture": ExtResource("2_1ftpu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_p5mri")
+"texture": ExtResource("3_uovtg")
 }, {
 "duration": 0.5,
-"texture": ExtResource("2_vo4c4")
+"texture": ExtResource("2_1ftpu")
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 5.0
 }]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w40t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nhdgb"]
 font_size = 48
@@ -35,16 +33,14 @@ script/source = "extends Label
 "
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(0, -12)
 script = ExtResource("1_7ll6t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(6, 12, 10, 4, 10, -8, 6, -12, -6, -12, -10, -8, -10, 4, -6, 12)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m6ndp")
 flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.989744, 0.816438)
-shape = SubResource("CapsuleShape2D_0w40t")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -12)

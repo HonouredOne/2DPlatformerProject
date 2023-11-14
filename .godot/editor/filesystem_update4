@@ -1,14 +1,9 @@
-res://Scenes/Levels/Level1.tscn
-res://Level1.tscn
-res://Scenes/Objects/Spikes.tscn
+res://Scenes/Characters/Flyer.tscn
 res://Platformer_Tileset.tres
-res://Scenes/Objects/Sign.tscn
-res://Scripts/Sign.gd
-res://Scenes/Characters/Enemy.tscn
 res://Scenes/Characters/Player.tscn
+res://Scenes/Levels/Level1.tscn
 res://Scenes/Levels/Level2.tscn
 res://Scenes/Objects/Coin.tscn
 res://Scenes/Objects/EndFlag.tscn
-res://Scripts/Coin.gd
+res://Scenes/Objects/Spikes.tscn
 res://Scripts/Player.gd
-res://Scripts/EndFlag.gd

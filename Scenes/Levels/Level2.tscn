@@ -16,4 +16,4 @@ position = Vector2(-131, -12)
 
 [node name="EndFlag" parent="." instance=ExtResource("3_fgo4b")]
 position = Vector2(205, -7)
-next_scene = "res://Level1.tscn"
+next_scene = "res://Scenes/Levels/Level1.tscn"

@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cj51wfdtrliei" path="res://Platformer_Tileset.tres" id="1_8leg8"]
 [ext_resource type="PackedScene" uid="uid://bn30rvs1dqoyd" path="res://Scenes/Characters/Player.tscn" id="2_st5gt"]
 [ext_resource type="PackedScene" uid="uid://dsu2vvf0tref8" path="res://Scenes/Objects/Coin.tscn" id="3_jym8e"]
-[ext_resource type="PackedScene" uid="uid://bph4rj2fv6f0h" path="res://Scenes/Characters/Enemy.tscn" id="4_3bjsa"]
+[ext_resource type="PackedScene" uid="uid://dxjbtxovod6jm" path="res://Scenes/Characters/Flyer.tscn" id="5_oaxmt"]
 [ext_resource type="PackedScene" uid="uid://c7163b1a8e70f" path="res://Scenes/Objects/EndFlag.tscn" id="6_cb551"]
 [ext_resource type="PackedScene" uid="uid://tysqopn6n4aw" path="res://Scenes/Objects/Spikes.tscn" id="6_e3l74"]
 
@@ -73,25 +73,18 @@ position = Vector2(360, -68)
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("4_3bjsa")]
+[node name="Flyer" parent="Enemies" instance=ExtResource("5_oaxmt")]
 position = Vector2(49, -18)
-move_speed = 40.0
-move_dir = Vector2(0, -75)
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource("4_3bjsa")]
+[node name="Flyer2" parent="Enemies" instance=ExtResource("5_oaxmt")]
 position = Vector2(136, -22)
-move_dir = Vector2(0, -60)
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource("4_3bjsa")]
+[node name="Flyer3" parent="Enemies" instance=ExtResource("5_oaxmt")]
 position = Vector2(235, -28)
-move_speed = 50.0
-move_dir = Vector2(0, -80)
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource("4_3bjsa")]
+[node name="Flyer4" parent="Enemies" instance=ExtResource("5_oaxmt")]
 position = Vector2(414, -30)
-move_speed = 60.0
-move_dir = Vector2(0, -100)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_cb551")]
 position = Vector2(465, -62)
-next_scene = "res://Level2.tscn"
+next_scene = "res://Scenes/Levels/Level2.tscn"
