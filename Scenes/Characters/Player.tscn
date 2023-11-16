@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn30rvs1dqoyd"]
+[gd_scene load_steps=9 format=3 uid="uid://bn30rvs1dqoyd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7ll6t"]
 [ext_resource type="Texture2D" uid="uid://bqb4j84403j2a" path="res://Sprites/Characters/character_0000.png" id="2_1ftpu"]
 [ext_resource type="Texture2D" uid="uid://2k3iywmsqila" path="res://Sprites/Characters/character_0001.png" id="3_uovtg"]
 [ext_resource type="AudioStream" uid="uid://d23hdcbessls5" path="res://Audio/coin_2-89099.mp3" id="4_mhtfu"]
+[ext_resource type="FontFile" uid="uid://wgdu75088t74" path="res://Font/Lilian.ttf" id="5_phk7q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m6ndp"]
 animations = [{
@@ -23,8 +24,9 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nhdgb"]
-font_size = 48
-outline_size = 5
+font = ExtResource("5_phk7q")
+font_size = 60
+outline_size = 34
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="GDScript" id="GDScript_fyep1"]
@@ -43,19 +45,24 @@ sprite_frames = SubResource("SpriteFrames_m6ndp")
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -12)
-zoom = Vector2(3, 3)
+offset = Vector2(0, -50)
+zoom = Vector2(2.5, 2.5)
+limit_top = -166
+limit_bottom = 120
 
 [node name="CoinGet" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mhtfu")
 volume_db = -7.5
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="ScoreText" type="Label" parent="CanvasLayer"]
-offset_left = 10.0
-offset_right = 190.0
-offset_bottom = 70.0
+[node name="ScoreText" type="Label" parent="UI"]
+offset_left = 23.0
+offset_top = 12.0
+offset_right = 257.0
+offset_bottom = 75.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_nhdgb")
+uppercase = true
 script = SubResource("GDScript_fyep1")

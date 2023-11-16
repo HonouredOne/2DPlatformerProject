@@ -2,7 +2,7 @@ extends Area2D
 
 @export_file("*.tscn") var next_scene
 
-var wind_speed = randf_range(0.5, 2.0)
+@export_range(0.5, 5.0, 0.5) var wind_speed : float = 1.0
 
 func _ready():
 	$AnimatedSprite2D.speed_scale = wind_speed

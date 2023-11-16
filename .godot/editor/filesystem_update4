@@ -1,9 +1,11 @@
-res://Scenes/Characters/Flyer.tscn
+res://Scenes/Objects/EndFlag.tscn
 res://Platformer_Tileset.tres
+res://addons/script-ide/plugin.gd
 res://Scenes/Characters/Player.tscn
 res://Scenes/Levels/Level1.tscn
+res://Scripts/EndFlag.gd
+res://Scenes/Characters/Flyer.tscn
 res://Scenes/Levels/Level2.tscn
 res://Scenes/Objects/Coin.tscn
-res://Scenes/Objects/EndFlag.tscn
 res://Scenes/Objects/Spikes.tscn
 res://Scripts/Player.gd

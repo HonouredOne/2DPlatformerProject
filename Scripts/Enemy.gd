@@ -12,7 +12,7 @@ var target_pos : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_pos = global_position
-	target_pos = start_pos + move_direction
+	target_pos = start_pos + Vector2(move_direction.x, -move_direction.y)
 	_animated_sprite.play()
 
 
@@ -22,7 +22,7 @@ func _process(delta):
 
 	if global_position == target_pos:
 		if global_position == start_pos:
-			target_pos = start_pos + move_direction
+			target_pos = start_pos + Vector2(move_direction.x, -move_direction.y)
 		else:
 			target_pos = start_pos
 

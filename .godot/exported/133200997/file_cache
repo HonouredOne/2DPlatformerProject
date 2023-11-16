@@ -1,0 +1,8 @@
+res://Scenes/Characters/Flyer.tscn::66c1a0f58e967ffd33f2661b49bdd2d4::1700117552::res://.godot/exported/133200997/export-c1ab9cfb1c26fb593324c02df229d672-Flyer.scn
+res://Scenes/Characters/Player.tscn::4e9da0035104ed709c5bebc5bde2763d::1700117552::res://.godot/exported/133200997/export-eaced3080becb3927070e5202bb1685b-Player.scn
+res://Scenes/Levels/Level1.tscn::e7726a8a7c3529a69cc934dfed6da65d::1700117553::res://.godot/exported/133200997/export-25e2e42a0b4c24c028143b59a0da7b5f-Level1.scn
+res://Scenes/Levels/Level2.tscn::8b69bb8c9fa69ee9824f9b8f87753c1b::1700117553::res://.godot/exported/133200997/export-464c93198fde5af327527d5734cf2d43-Level2.scn
+res://Scenes/Objects/Coin.tscn::10408548cc832221dd7f3ccd9cc74d3c::1700117553::res://.godot/exported/133200997/export-9353fb4168a61d506faaaa8ee8635857-Coin.scn
+res://Scenes/Objects/EndFlag.tscn::f8bafdb52f8df5543d6cd4c507526051::1700117553::res://.godot/exported/133200997/export-3747a09eb20029308fc19ad5facbc74c-EndFlag.scn
+res://Scenes/Objects/Spikes.tscn::6f62328f276784f17d9b0daff926e06d::1700117553::res://.godot/exported/133200997/export-dce8f2d3c64f02559a99698f241eb1a1-Spikes.scn
+res://Platformer_Tileset.tres::b460212f179f4e9423bef702f13e1782::1700117450::res://.godot/exported/133200997/export-bc775c5e1034bab80f59608b8e2d9f76-Platformer_Tileset.res

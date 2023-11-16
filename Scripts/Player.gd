@@ -6,8 +6,9 @@ var gravity : float = 500.0
 
 var score : int = PlayerVariables.current_score
 
-@onready var score_text : Label = $CanvasLayer/ScoreText
+@onready var score_text : Label = $UI/ScoreText
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var camera = $Camera2D
 
 func _ready():
 	score_text.text = str("Score: ", score)
@@ -28,7 +29,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	if global_position.y > 100:
+	if global_position.y > camera.limit_bottom:
 		game_over()
 
 func _process(_delta):
